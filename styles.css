@@ -16,7 +16,6 @@ body {
     display: block;
 }
 
-/* TITRES PRINCIPAUX ET INTERNES */
 .title {
     font-size: 30px;
     font-weight: bold;
@@ -28,7 +27,6 @@ body {
     margin: 20px auto;
 }
 
-/* BOUTONS */
 .nav-btn, .home-btn {
     font-size: 28px;
     padding: 30px 60px;
@@ -44,7 +42,6 @@ body {
     background-color: #ffb6c1;
 }
 
-/* BLOC BOUTON + IMAGE */
 .button-block {
     margin: 30px auto;
 }
@@ -58,11 +55,42 @@ body {
     border-radius: 30px;
 }
 
-/* IMAGES DES PAGES INTERNES */
 .page-img {
     width: 450px;
     height: 300px;
     object-fit: cover;
     border-radius: 30px;
     margin: 10px auto 30px;
+}
+
+/* LISTES AVEC PUCES COLORÉES */
+ul {
+    list-style: none;
+    padding-left: 50px;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 25px;
+}
+
+li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 28px;
+    line-height: 1;
+    color: #001f3f; /* bleu nuit */
+}
+
+li:nth-child(2n)::before {
+    color: #ffb6c1; /* rose pastel */
+}
+
+li:nth-child(3n)::before {
+    color: #66d1d1; /* turquoise clair */
 }

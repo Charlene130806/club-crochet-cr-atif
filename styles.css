@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Baskerville Old Face", serif;
+    font-size: 24px;
+    background: white;
+}
+
+.page {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.page.active {
+    display: block;
+}
+
+/* TITRES PRINCIPAUX ET INTERNES */
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(to right, #001f3f, #ffb6c1, #66d1d1);
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* BOUTONS */
+.nav-btn, .home-btn {
+    font-size: 28px;
+    padding: 30px 60px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: #66d1d1;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-btn:hover, .home-btn:hover {
+    background-color: #ffb6c1;
+}
+
+/* BLOC BOUTON + IMAGE */
+.button-block {
+    margin: 30px auto;
+}
+
+.btn-img {
+    display: block;
+    width: 450px;
+    height: 300px;
+    margin: 15px auto;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* IMAGES DES PAGES INTERNES */
+.page-img {
+    width: 450px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 30px;
+    margin: 10px auto 30px;
+}

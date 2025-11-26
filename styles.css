@@ -3,31 +3,7 @@ body {
     padding: 0;
     font-family: "Baskerville Old Face", serif;
     font-size: 24px;
-
-    /* Fond blanc avec motifs avancés : étoiles, crochets, pelotes, animaux mignons */
-    background-color: white;
-    background-image: url("data:image/svg+xml;utf8,
-    <svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'>
-      <!-- Etoiles -->
-      <polygon points='10,0 12,7 20,7 14,11 16,18 10,14 4,18 6,11 0,7 8,7' fill='%23ffb6c1'/>
-      <polygon points='150,30 153,37 160,37 154,41 156,48 150,44 144,48 146,41 140,37 147,37' fill='%2366d1d1'/>
-      
-      <!-- Pelotes de laine -->
-      <circle cx='50' cy='150' r='6' fill='%23ffb6c1'/>
-      <circle cx='160' cy='160' r='5' fill='%23001f3f'/>
-      
-      <!-- Crochets stylisés -->
-      <path d='M100 50 c0 -5 10 -5 10 0 s-10 5 -10 0' stroke='%23001f3f' stroke-width='2' fill='none'/>
-      <path d='M30 80 c0 -3 6 -3 6 0 s-6 3 -6 0' stroke='%2366d1d1' stroke-width='1.5' fill='none'/>
-      
-      <!-- Animaux stylisés simples -->
-      <circle cx='180' cy='180' r='4' fill='%23ffb6c1'/>
-      <circle cx='182' cy='178' r='1' fill='%23001f3f'/>
-      <circle cx='178' cy='178' r='1' fill='%23001f3f'/>
-      <path d='M178,182 q2,3 4,0' stroke='%23001f3f' stroke-width='1' fill='none'/>
-    </svg>");
-    background-repeat: repeat;
-    background-size: 200px 200px;
+    background: white;
 }
 
 .page {
@@ -108,13 +84,13 @@ li::before {
     top: 0;
     font-size: 28px;
     line-height: 1;
-    color: #001f3f;
+    color: #001f3f; /* bleu nuit */
 }
 
 li:nth-child(2n)::before {
-    color: #ffb6c1;
+    color: #ffb6c1; /* rose pastel */
 }
 
 li:nth-child(3n)::before {
-    color: #66d1d1;
+    color: #66d1d1; /* turquoise clair */
 }

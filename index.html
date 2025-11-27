@@ -1,127 +1,120 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: "Baskerville Old Face", serif;
-    font-size: 24px;
-    background: white;
-}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Crochet Créatif</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
 
-.page {
-    display: none;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    min-height: 100vh;
-    background-image: none;
-}
+  <!-- PAGE PRINCIPALE -->
+  <div id="mainPage" class="page active">
+    <h1 class="title main-title">Crochet Créatif</h1>
 
-/* Frise en arrière-plan sur toutes les pages sauf la principale */
-#horairePage::before,
-#materielPage::before,
-#infoPage::before,
-#inscriptionPage::before {
-    content: "";
-    position: absolute;
-    left: 0; right: 0; bottom: 0;
-    height: 100px;
-    background-image: url('frise.png'); /* chemin vers ton image */
-    background-repeat: repeat-x;
-    background-position: center bottom;
-    background-size: auto 100px;
-    opacity: 0.1;
-    pointer-events: none;
-    z-index: 0;
-}
+    <div class="button-block">
+      <button class="nav-btn" data-target="horairePage">Lieu & Horaire</button>
+      <img class="btn-img"
+           src="https://i.pinimg.com/474x/bb/c2/52/bbc2525c14342caac0fdd68ae1e77e85.jpg"
+           alt="Lieu et Horaire">
+    </div>
 
-.page > * {
-    position: relative;
-    z-index: 1;
-}
+    <div class="button-block">
+      <button class="nav-btn" data-target="materielPage">Matériel</button>
+      <img class="btn-img"
+           src="https://www.supergurumi.com/wp-content/uploads/2023/07/Accessoires-et-Materiel-de-Crochet.jpg"
+           alt="Matériel">
+    </div>
 
-.page.active {
-    display: block;
-}
+    <div class="button-block">
+      <button class="nav-btn" data-target="infoPage">Information</button>
+      <img class="btn-img"
+           src="https://www.rubydiy.com/wp-content/uploads/2021/08/%E4%B9%8C%E9%BE%9F.jpg"
+           alt="Information">
+    </div>
 
-.title {
-    font-size: 30px;
-    font-weight: bold;
-    background: linear-gradient(to right, #001f3f, #ffb6c1, #66d1d1);
-    color: white;
-    padding: 20px;
-    border-radius: 20px;
-    width: 80%;
-    margin: 20px auto;
-}
+    <div class="button-block">
+      <button class="nav-btn" data-target="inscriptionPage">Inscription</button>
+      <img class="btn-img"
+           src="https://www.countryandtownhouse.com/wp-content/uploads/2017/10/small-crochet-1070x714.jpg"
+           alt="Inscription">
+    </div>
+  </div>
 
-.nav-btn, .home-btn {
-    font-size: 28px;
-    padding: 30px 60px;
-    border: none;
-    cursor: pointer;
-    margin-bottom: 20px;
-    background-color: #66d1d1;
-    border-radius: 20px;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-}
+  <!-- PAGE LIEU & HORAIRE -->
+  <div id="horairePage" class="page">
+    <div class="page-content">
+      <h2 class="title">Lieu et horaire</h2>
+      <img class="page-img"
+           src="https://i.pinimg.com/474x/bb/c2/52/bbc2525c14342caac0fdd68ae1e77e85.jpg"
+           alt="Lieu et horaire">
+      <p>
+        Le club est ouvert tous les mardis de 16h à 18h et tous les vendredis de 16h à 18h,
+        sur le campus Chêne de l’Université de Cergy.<br>
+        La salle sera communiquée avant chaque séance.
+      </p>
+    </div>
+    <button class="home-btn">Home</button>
+  </div>
 
-.nav-btn:hover, .home-btn:hover {
-    background-color: #ffb6c1;
-    /* plus de transform pour aucun mouvement */
-}
+  <!-- PAGE MATÉRIEL -->
+  <div id="materielPage" class="page">
+    <div class="page-content">
+      <h2 class="title">Matériel</h2>
+      <img class="page-img"
+           src="https://www.supergurumi.com/wp-content/uploads/2023/07/Accessoires-et-Materiel-de-Crochet.jpg"
+           alt="Matériel">
+      <ul>
+        <li>Environ 5 crochets de tailles différentes</li>
+        <li>Pelotes de laine (tout type, toutes tailles)</li>
+        <li>Yeux de sécurité</li>
+        <li>Marqueurs de mailles</li>
+        <li>Paire de ciseaux</li>
+        <li>Aiguilles à laine</li>
+      </ul>
+    </div>
+    <button class="home-btn">Home</button>
+  </div>
 
-.button-block {
-    margin: 30px auto;
-}
+  <!-- PAGE INFORMATIONS -->
+  <div id="infoPage" class="page">
+    <div class="page-content">
+      <h2 class="title">Informations</h2>
+      <img class="page-img"
+           src="https://www.rubydiy.com/wp-content/uploads/2021/08/%E4%B9%8C%E9%BE%9F.jpg"
+           alt="Informations">
+      <ul>
+        <li>Toute personne inscrite à l'Université de Cergy ou une école liée est bienvenue.</li>
+        <li>Vous venez quand vous pouvez (même 30 minutes).</li>
+        <li>Projets personnels ou projets collectifs (peluches pour marché de Noël).</li>
+        <li>Respect & entraide obligatoires.</li>
+        <li>Matériel parfois prêté si besoin.</li>
+      </ul>
+    </div>
+    <button class="home-btn">Home</button>
+  </div>
 
-.btn-img, .page-img {
-    display: block;
-    width: 450px;
-    height: 300px;
-    margin: 15px auto;
-    object-fit: cover;
-    border-radius: 30px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
+  <!-- PAGE INSCRIPTION -->
+  <div id="inscriptionPage" class="page">
+    <div class="page-content">
+      <h2 class="title">Inscription</h2>
+      <img class="page-img"
+           src="https://www.countryandtownhouse.com/wp-content/uploads/2017/10/small-crochet-1070x714.jpg"
+           alt="Inscription">
+      <p>Pour s’inscrire, envoyez vos informations à :</p>
+      <p><strong>c.evrard@ileps.fr</strong></p>
+      <ul>
+        <li>Nom et prénom</li>
+        <li>Âge</li>
+        <li>Adresse mail</li>
+        <li>Numéro de téléphone</li>
+        <li>Dossier étudiant</li>
+        <li>Adresse et code postal</li>
+        <li>Informations supplémentaires (ex : handicap)</li>
+      </ul>
+    </div>
+    <button class="home-btn">Home</button>
+  </div>
 
-ul {
-    list-style: none;
-    padding-left: 50px;
-    text-align: left;
-    margin-bottom: 20px;
-}
-
-li {
-    position: relative;
-    margin-bottom: 10px;
-    padding-left: 25px;
-}
-
-li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 28px;
-    line-height: 1;
-    color: #001f3f;
-}
-
-li:nth-child(2n)::before {
-    color: #ffb6c1;
-}
-
-li:nth-child(3n)::before {
-    color: #66d1d1;
-}
-
-.page-content {
-    padding-bottom: 120px;
-}
-
-.home-btn {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
+</body>
+</html>

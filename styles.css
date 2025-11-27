@@ -10,6 +10,10 @@ body {
     display: none;
     text-align: center;
     padding: 20px;
+    min-height: 100vh; /* Assure que chaque page prend toute la hauteur */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Pousse le bouton Home vers le bas */
 }
 
 .page.active {
@@ -93,4 +97,10 @@ li:nth-child(2n)::before {
 
 li:nth-child(3n)::before {
     color: #66d1d1; /* turquoise clair */
+}
+
+/* Pousser le bouton 'Home' vers le bas de la page */
+.home-btn {
+    align-self: center;
+    margin-top: auto; /* Ce style pousse le bouton vers le bas */
 }
